@@ -1,0 +1,104 @@
+Predicting..
+Using TensorFlow backend.
+Start ../deepcon-covariance.py - 2019-04-02 21:14:19.738475
+
+Read sequence[0] from aln..
+
+Convert aln to covariance matrix.. patience..
+
+Build a model of the size of the input (and not bigger)..
+2019-04-02 21:15:36.026534: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-02 21:15:36.402690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:b3:00.0
+totalMemory: 23.88GiB freeMemory: 929.56MiB
+2019-04-02 21:15:36.537633: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Quadro P400 major: 6 minor: 1 memoryClockRate(GHz): 1.2525
+pciBusID: 0000:04:00.0
+totalMemory: 1.94GiB freeMemory: 1.89GiB
+2019-04-02 21:15:36.537679: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1496] Ignoring visible gpu device (device: 1, name: Quadro P400, pci bus id: 0000:04:00.0, compute capability: 6.1) with Cuda multiprocessor count: 2. The minimum required count is 8. You can adjust this requirement with the env var TF_MIN_GPU_MULTIPROCESSOR_COUNT.
+2019-04-02 21:15:36.537684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-02 21:15:41.856294: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-02 21:15:41.856377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 
+2019-04-02 21:15:41.856399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N N 
+2019-04-02 21:15:41.856418: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   N N 
+2019-04-02 21:15:41.872408: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 640 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:b3:00.0, compute capability: 6.1)
+
+Load weights from ../weights-rdd-covariance.hdf5..
+
+Predict..
+2019-04-02 21:15:47.763826: W tensorflow/core/framework/allocator.cc:122] Allocation of 115605504 exceeds 10% of system memory.
+2019-04-02 21:15:48.424531: W tensorflow/core/framework/allocator.cc:122] Allocation of 115605504 exceeds 10% of system memory.
+2019-04-02 21:15:49.628223: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.12GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-04-02 21:15:49.635092: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.14GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-04-02 21:15:49.646045: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 650.38MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+
+Write RR file ./16pkA0.rr.. 
+Done ../deepcon-covariance.py - 2019-04-02 21:15:49.941175
+Evaluating..
+PDB     : ./16pkA.pdb
+RR      : ./16pkA0.rr
+L       : 260 (pdb's chain length without gaps)
+Nc      : 386 (pdb's contact count)
+Seq Sep : 24 to INF
+PDB-Seq : EKKSINECDLKGKKVLIRVDFNVPVKNGKITNDYRIRSALPTLKKVLTEGGSCVLMSHLGRPKGIPMAQAGKIRSTGGVPGFQQKATLKPVAKRLSELLLRPVTFAPDCLNAADVVSKMSPGDVVLLENVRFYKEEGSKKAKDREAMAKILASYGDVYISDAFGTAHRDSATMTGIPKILGNGAAGYLMEKEISYFAKVLGNPPRPLVAIVGGAKVSDKIQLLDNMLQRIDYLLIGGAMAYTFLKAQGYSIGKSKC
+
+CONTACT-COUNTS                Top-L/10  Top-L/5   Top-L/2   Top-L     Top-2L    ALL       
+16pkA0.rr (count)             26        52        130       260       520       27028     
+16pkA.pdb (count)             26        52        130       260       386       386       
+
+PRECISION                     Top-5     Top-L/10  Top-L/5   Top-L/2   Top-L     Top-2L    
+16pkA0.rr (precision)         100.00    92.31     94.23     85.38     60.77     38.08     
+16pkA.pdb (precision)         100.00    100.00    100.00    100.00    100.00    100.00    
+Predicting..
+Using TensorFlow backend.
+Start ../deepcon-covariance.py - 2019-04-02 21:15:58.151435
+
+Read sequence[0] from aln..
+
+Convert aln to covariance matrix.. patience..
+
+Build a model of the size of the input (and not bigger)..
+2019-04-02 21:16:53.853489: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-02 21:16:54.066137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Quadro P6000 major: 6 minor: 1 memoryClockRate(GHz): 1.645
+pciBusID: 0000:b3:00.0
+totalMemory: 23.88GiB freeMemory: 929.56MiB
+2019-04-02 21:16:54.203839: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Quadro P400 major: 6 minor: 1 memoryClockRate(GHz): 1.2525
+pciBusID: 0000:04:00.0
+totalMemory: 1.94GiB freeMemory: 1.89GiB
+2019-04-02 21:16:54.203885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1496] Ignoring visible gpu device (device: 1, name: Quadro P400, pci bus id: 0000:04:00.0, compute capability: 6.1) with Cuda multiprocessor count: 2. The minimum required count is 8. You can adjust this requirement with the env var TF_MIN_GPU_MULTIPROCESSOR_COUNT.
+2019-04-02 21:16:54.203891: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-02 21:16:59.244321: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-02 21:16:59.244389: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 
+2019-04-02 21:16:59.244404: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N N 
+2019-04-02 21:16:59.244416: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   N N 
+2019-04-02 21:16:59.252681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 640 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:b3:00.0, compute capability: 6.1)
+
+Load weights from ../weights-rdd-covariance.hdf5..
+
+Predict..
+2019-04-02 21:17:04.798299: W tensorflow/core/framework/allocator.cc:122] Allocation of 115605504 exceeds 10% of system memory.
+2019-04-02 21:17:05.506233: W tensorflow/core/framework/allocator.cc:122] Allocation of 115605504 exceeds 10% of system memory.
+2019-04-02 21:17:06.533420: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.12GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-04-02 21:17:06.540135: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.14GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-04-02 21:17:06.550910: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 650.38MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+
+Write RR file ./1a0tP0.rr.. 
+Done ../deepcon-covariance.py - 2019-04-02 21:17:06.889115
+Evaluating..
+PDB     : ./1a0tP.pdb
+RR      : ./1a0tP0.rr
+L       : 256 (pdb's chain length without gaps)
+Nc      : 301 (pdb's contact count)
+Seq Sep : 24 to INF
+PDB-Seq : SGFEFHGYARSGVIMNDSGASTKSGAYITPAGETGGAIGRLGNQADTYVEMNLEHKQTLDNGATTRFKVMVADGQTSYNDWTASTSDLNVRQAFVELGNLPTFAGPFKGSTLWAGKRFDRDNFDIHWIDSDVVFLAGTGGGIYDVKWNDGLRSNFSLYGRNFGDIDDSSNSVQNYILTMNHFAGPLQMMVSGLRAKDNDERKDSNGNLAKGDAANTGVHALLGLHNDSFYGLRDGSSKTALLYGHGLGAEVKGIGS
+
+CONTACT-COUNTS                Top-L/10  Top-L/5   Top-L/2   Top-L     Top-2L    ALL       
+1a0tP0.rr (count)             26        51        128       256       512       27028     
+1a0tP.pdb (count)             26        51        128       256       301       301       
+
+PRECISION                     Top-5     Top-L/10  Top-L/5   Top-L/2   Top-L     Top-2L    
+1a0tP0.rr (precision)         100.00    96.15     88.24     76.56     56.64     35.16     
+1a0tP.pdb (precision)         100.00    100.00    100.00    100.00    100.00    100.00    
